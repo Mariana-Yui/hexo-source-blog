@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/*
+!/node_modules/hexo-theme-fluid/
+public/
+.deploy*/
+_multiconfig.yml
+.vscode/
+# obsidian
+_week_record/
+template/

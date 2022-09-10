@@ -1,0 +1,106 @@
+navbar:
+  blog_title: Mariana's Blog
+lazyload:
+  enable: true
+  loading_img: /imgs/loading.gif
+  onlypost: false
+  offset_factor: 2
+web_analytics:  # 网页访问统计
+  enable: true # 默认为false，启用网页统计改为true即可
+  baidu:  41fc030db57d5570dd22f78997dc4a7e
+  google: UA-148995736-1
+  leancloud:
+    app_id: PDAXepQnN6qOzhO7B5vXKLnC-gzGzoHsz
+    app_key: kCWBURFFZoT5nd7Pj7gcnqX0
+    server_url: https://pdaxepqn.lc-cn-n1-shared.com
+post:
+  # default_index_img: https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662188553430_9704.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
+  meta:
+    author:  # 作者，优先根据 front-matter 里 author 字段，其次是 hexo 配置中 author 值
+      enable: true
+    date:  # 文章日期，优先根据 front-matter 里 date 字段，其次是 md 文件日期
+      enable: true
+      format: "dddd, MMMM Do YYYY, h:mm a"  # 格式参照 ISO-8601 日期格式化
+      # format: "YYYY-MM-DD HH:mm:ss"
+    wordcount:  # 字数统计
+      enable: true
+      format: "{} 字"  # 显示的文本，{}是数字的占位符（必须包含)，下同
+    min2read:  # 阅读时间
+      enable: true
+      format: "{} 分钟"
+    views:  # 阅读次数
+      enable: true
+      source: "leancloud"  # 统计数据来源，可选：leancloud | busuanzi   注意不蒜子会间歇抽风
+      format: "{} 次"
+  comments:
+    enable: true
+    type: disqus
+disqus:
+  shortname: mariana-yui-github-io
+footer:
+  statistics:
+    enable: true
+    source: "leancloud"  # 可选 leancloud | busuanzi  根据自己需求选择
+    pv_format: "总访问量 {} 次"  # 显示的文本，{}是数字的占位符（必须包含)，下同
+    uv_format: "总访客数 {} 人"
+  content: '
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    <div>
+      <span>Copyright &copy; Mariana Blog
+        <span id="curYear"></span>
+      </span>
+      <br>
+      <span>Theme on <a href="https://github.com/mariana-yui/mariana-yui.github.io.git">GitHub</a></span> |
+      <iframe
+          style="margin-left: 2px; margin-bottom:-5px;"
+          frameborder="0" scrolling="0" width="100px" height="20px"
+          src="https://ghbtns.com/github-btn.html?user=Mariana-Yui&repo=Mariana-Yui.github.io&type=star&count=true" >
+      </iframe>
+    </div>
+    <div style="font-size: 0.85rem;margin: 0.25rem 0">
+      <span id="timeDate">载入天数...</span>
+      <span id="times">载入时分秒...</span>
+    </div>
+    <script src="/js/duration.js"></script>
+  '
+index:
+  banner_img: /imgs/banner/index.png
+  slogan:
+    text: "花火が瞬く夜に"
+category:
+  banner_img: /imgs/banner/category.png
+archive:
+  banner_img: /imgs/banner/archive.jpeg
+tag:
+  banner_img: /imgs/banner/mywifu2.png
+  banner_img_height: 60
+about:
+  banner_img: /imgs/banner/about.png
+  banner_img_height: 60
+  banner_mask_alpha: 0.3
+  avatar: /imgs/sllh.jpeg
+  name: "Mariana"
+  intro: "立志成为高级全栈工程师_(:з」∠)_"
+  # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
+  # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
+  icons:
+    - { class: "iconfont icon-github-fill", link: "https://github.com/Mariana-Yui", tip: "GitHub" }
+    - {class: "iconfont icon-bilibili", link: "https://space.bilibili.com/10033472", tip: "Bilibili"}
+    - {class: "iconfont icon-music", link: "https://music.163.com/#/user/home?id=38425296", tip: "网易云音乐"}
+    # - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
+
+favicon: /imgs/favicon.ico
+apple_touch_icon: /imgs/favicon.ico
+
+custom_js:
+  - /js/cursor-love.js
+  - /js/nav-title.js
+  - /js/APlayer.min.js
+  - /js/play.js
+  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicRibbon.min.js
+  - /js/bg.js
+  - /js/style.js
+custom_css:
+  - '/css/APlayer.min.css'

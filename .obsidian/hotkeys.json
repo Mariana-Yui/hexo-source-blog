@@ -1,0 +1,20 @@
+{
+  "workspace:split-vertical": [
+    {
+      "modifiers": ["Mod"],
+      "key": "ArrowRight"
+    }
+  ],
+  "app:delete-file": [
+    {
+      "modifiers": ["Mod"],
+      "key": "Backspace"
+    }
+  ],
+  "editor:toggle-source": [
+    {
+      "modifiers": ["Alt", "Mod"],
+      "key": "E"
+    }
+  ]
+}
