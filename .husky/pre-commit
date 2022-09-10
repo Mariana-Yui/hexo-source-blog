@@ -3,4 +3,5 @@
 
 npx pretty-quick --staged
 # 构建
+rm -rf public
 hexo g -d
