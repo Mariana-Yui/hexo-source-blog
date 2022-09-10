@@ -1517,10 +1517,10 @@ hexo-renderer-ejs@^2.0.0:
   dependencies:
     ejs "^3.1.6"
 
-hexo-renderer-markdown-it-plus@^1.0.5:
-  version "1.0.5"
-  resolved "https://mirrors.tencent.com/npm/hexo-renderer-markdown-it-plus/-/hexo-renderer-markdown-it-plus-1.0.5.tgz#4dfefe61b922a1086c6f44e93c365bed3b85d54b"
-  integrity sha512-Bj0qbHCKpz2tYpY+w4L088/FIgxy3CPCUGIIHwKd1vJQELpwGBe8KJ0u5QmPk+gjTICqJbn7WAYAhQeUIcXJCg==
+hexo-renderer-markdown-it-plus@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/hexo-renderer-markdown-it-plus/-/hexo-renderer-markdown-it-plus-1.0.6.tgz#13a2094ef6925fb582208e582b12a407749b6f25"
+  integrity sha512-nuidp4IvyHC9G3hnRO4bY7BfBBZBhnOEfQjfk6AJI+qsy+BlaUwDvemuARFTD3APPIO78YamAv5mweo5XMRwfA==
   dependencies:
     "@iktakahiro/markdown-it-katex" "^4.0.1"
     clone "^2.1.1"
