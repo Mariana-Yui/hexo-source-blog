@@ -4,24 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "d361349566b3b9a9",
+        "id": "154682da8339a470",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_posts/2022-09-09-study-webpack-day4.md",
+            "file": "source/_posts/2022-09-09-study-webpack-day4.md",
             "mode": "source",
             "source": false
           }
         }
       },
       {
-        "id": "574fa91fbc90f4e9",
+        "id": "54b6728a56d09ca9",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_posts/2022-09-09-study-webpack-day4.md",
+            "file": "source/_posts/2022-09-09-study-webpack-day4.md",
             "mode": "preview",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2022-09-09-study-webpack-day4.md",
+                "file": "source/_posts/2022-09-09-study-webpack-day4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2022-09-09-study-webpack-day4.md",
+                "file": "source/_posts/2022-09-09-study-webpack-day4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2022-09-09-study-webpack-day4.md"
+                "file": "source/_posts/2022-09-09-study-webpack-day4.md"
               }
             }
           }
@@ -156,17 +156,17 @@
     "direction": "horizontal",
     "width": 299.5
   },
-  "active": "1e8902e89baf2490",
+  "active": "54b6728a56d09ca9",
   "lastOpenFiles": [
+    "_week_record/2022年第36周-周记.md",
+    "source/_posts/2021-11-16-koa-router.md",
+    "source/_posts/2022-09-10.md",
     "_posts/2022-09-03-study-webpack-day3.md",
     "_posts/2022-09-09-study-webpack-day4.md",
     "_week_record/2022年第37周-周记.md",
-    "_week_record/2022年第36周-周记.md",
     "_week_record/template/ new-week-record.md",
     "README.md",
     "_posts/2022-09-01-study-webpack-day1.md",
-    "_posts/2022-09-02-study-webpack-day2.md",
-    "_posts/2022-08-25-lerna-record.md",
-    "_posts/2.md"
+    "_posts/2022-09-02-study-webpack-day2.md"
   ]
 }

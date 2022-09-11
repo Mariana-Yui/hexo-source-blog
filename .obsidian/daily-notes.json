@@ -1,4 +1,4 @@
 {
-  "folder": "_posts",
+  "folder": "source/_posts",
   "template": "template/new-note"
 }
