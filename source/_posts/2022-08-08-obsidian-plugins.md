@@ -3,8 +3,8 @@ layout: post
 title: obsidian插件记录
 date: 2022-08-08
 author: Mariana
-banner_img: //raw.githubusercontent.com/Mariana-Yui/images/master/blog-imgs/202208082314360.png
-index_img: //raw.githubusercontent.com/Mariana-Yui/images/master/blog-imgs/202208082314360.png
+banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662998852483_4171.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
+index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662998852483_4171.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 tags:
   - obsidian
 ---
@@ -48,7 +48,11 @@ const noteDate = window.moment(file.basename, format, true);
 `calendar`会对文件全名通过 moment.js 处理, 这就导致你如果文件名是`2022-08-10-obsidian-plugins`这样它就识别不出来, 就无法在日历上通过 dot 标识当天的日记, 啃爹呐这是 😅. 看了看 issue 也有人发出了相同一问, 半年过去了作者也没解决, 那我们就自己搞个 polyfill, 既然你全名不能生成日期那我就截断能生成日期的那部分不就好了-.-, 博主的笔记文件名都是`yyyy-mm-dd-笔记标题`这种格式, 通过以下正则即可让旧笔记显示在 📅 上了~
 
 ```js
-const noteDate = window.moment(file.basename.match(/\d{4}-\d{2}-\d{2}/g), format, true);
+const noteDate = window.moment(
+  file.basename.match(/\d{4}-\d{2}-\d{2}/g),
+  format,
+  true
+);
 ```
 
 效果图:
