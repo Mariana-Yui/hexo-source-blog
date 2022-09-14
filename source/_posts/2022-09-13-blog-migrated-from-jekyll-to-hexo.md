@@ -22,7 +22,17 @@ hide: true
 
 # reference
 
+[GitHub Pages + Hexo 搭建个人博客网站，史上最全教程](https://blog.csdn.net/yaorongke/article/details/119089190)
+[Hexo Fluid 配置指南](https://hexo.fluid-dev.com/docs/guide/)
+[Hexo 博客美化合集（不断更新）](https://zhuanlan.zhihu.com/p/69211731)
+[hexo 上的 aplayer 应用](https://blog.yleao.com/2018/0902/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A8.html)
 [让你的 Hexo 博客更美观的 N 种配置（基于 Fluid 主题扩展）](https://www.jianshu.com/p/ba692a97a602)
 [给你的 hexo 添加 live2D 看板娘](https://segmentfault.com/a/1190000042370263)(https://segmentfault.com/a/1190000042370263)
 [live2d 大模型](https://github.com/summerscar/live2dDemo)
 [hitokoto 佳句接口](https://v1.hitokoto.cn/)
+[LeanCloud 数据统计](https://console.leancloud.cn/apps)
+[Hexo Fluid 主题 细节优化](https://blog.csdn.net/qq_36852780/article/details/120943120)
+[Hexo（sakura）添加 live2d 看板动画（可对话，换装互动）](https://blog.csdn.net/cungudafa/article/details/104282643)
+[初音未来鼠标指针](https://www.himiku.com/archives/miku-mouse-cursor.html)
+[Hexo Front-matter](https://hexo.io/zh-cn/docs/front-matter)
+[Hexo Permalinks](https://hexo.io/docs/permalinks.html)
