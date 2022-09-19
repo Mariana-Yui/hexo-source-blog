@@ -4,7 +4,7 @@ const path = require('path');
 const moment = require('moment');
 const postPath = './source/_posts';
 const matchRegExp =
-  /updated:\s*(\d{2,4}\-\d{1,2}\-\d{1,2}(\s*\d{1,2}\:\d{1,2}(\:\d{1,2})?)?)/i;
+  /update:\s*(\d{2,4}\-\d{1,2}\-\d{1,2}(\s*\d{1,2}\:\d{1,2}(\:\d{1,2})?)?)/i;
 const format = 'YYYY-MM-DD HH:mm:ss';
 
 const files = fs
@@ -17,13 +17,14 @@ files.forEach((filename) => {
   const updatedDate = content.match(matchRegExp)?.[1];
   if (updatedDate) {
     const threshold = 1000 * 60 * 5; // 五分钟内的修改就忽略不计了
+    console.log(new Date(mtimeMs), new Date(updatedDate))
     if (mtimeMs - new Date(updatedDate).getTime() > threshold) {
       process.stdout.write(`${filename}最后更新时间变更: ${moment(updatedDate).format(format)} -> ${moment(mtime).format(format)}\n`);
       fs.writeFileSync(
         filePath,
         content.replace(
           matchRegExp,
-          `update: ${moment(updatedDate).format(format)}`
+          `update: ${moment(mtime).format(format)}`
         ),
         { encoding: 'utf-8' }
       );
