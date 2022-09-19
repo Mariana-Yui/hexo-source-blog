@@ -2,7 +2,7 @@
 layout: post
 title: webpack学习笔记(5)
 date: 2022-09-15 01:46:28
-update: 2022-09-20 00:31:15
+update: 2022-09-20 01:05:48
 author: Mariana
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663176015964_7082.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663176015964_7082.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -41,7 +41,7 @@ module.exports = {
 - CommonJS 加载 ES Module 原理
 - ES Module 加载 CommonJS 原理
 
-每种情况都会以简单案例讲解, 开始之前`webpack.config.js`需要配置`devtool: "source-map"`, 因为`development`模式下打包默认使用`eval`, 不方便阅读打包产物代码.
+每种情况都会以简单案例讲解, 开始之前`webpack.config.js`先配置`devtool: "source-map"`, 因为`development`模式下打包默认使用`eval`, 不方便阅读打包产物代码, 具体含义后续介绍.
 
 ### IIFE 立即执行函数
 
@@ -271,7 +271,49 @@ export default {
 
 ## devtool in webpack
 
-配置 devtool 能够帮助我们在程序报错更好地定位问题, webpack 中提供了 26 种 devtool 的值, 下面详细介绍下.
+配置 devtool 能够帮助我们在程序报错更好地定位问题, webpack 中提供了 26 种 devtool 的值, 下面详细介绍.
+
+mode 为`development`, devtool 默认值为`eval`;
+mode 为`production`, devtool 默认值为(nond), 这里的 none 不是字符串, 表示没有该项配置;
+
+### source-map
+
+devtool 设置为`source-map`后, 打包产物会多出来一个`bundle.js.map`文件
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663606242302_6243.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+并且在`bundle.js`除了打包的代码外最后还存在
+
+```
+//# sourceMappingURL=bundle.js.map
+```
+
+以下是 mode 为`production`, devtool 设置`source-map`生成的`bundle.js.map`内容:
+
+```json
+{
+  "version": 3,
+  "file": "bundle.js",
+  "mappings": "AASgB,IAAIA,SAAQ,CAACC,EAASC,KAAV,IAH1BC,QAAQC,IAFM,eAShBD,QAAQC,IAAIC",
+  "sources": ["webpack:///./src/index.js"],
+  "sourcesContent": [
+    /*源代码字符串*/
+  ],
+  "names": ["Promise", "resolve", "reject", "console", "log", "abc"],
+  "sourceRoot": ""
+}
+```
+
+每个字段含义如下:
+
+- version：Source map 的版本，目前为 3。
+- file：转换后的文件名。
+- sourceRoot：转换前的文件所在的目录。如果与转换前的文件在同一目录，该项为空。
+- sources：转换前的文件。该项是一个数组，表示可能存在多个文件合并。有时也会包含 webpack 库中的文件
+- names：转换前的所有变量名和属性名。mode 为`development`时代码并没有进行混淆, 变量名和属性名都不变, names 为空数组
+- mappings：记录位置信息的字符串，记录原文件到打包文件的所有映射, 详情可以查阅[阮一峰博客](https://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
+
+### eval
 
 # 示例代码
 
