@@ -2,6 +2,7 @@
 layout: post
 title: webpack学习笔记(5)
 date: 2022-09-15 01:46:28
+update: 2022-09-10 11:12:18
 author: Mariana
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663176015964_7082.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663176015964_7082.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -135,7 +136,146 @@ module.exports = {
 
 ### ESM 模块化实现原理
 
-2 点了..好困, to be continued...
+入口文件`esm_index.js`:
+
+```js
+import math from "./util/math";
+
+console.log(math.sum(10, 20));
+console.log(math.mul(10, 20));
+```
+
+引入模块文件:
+
+```js
+function sum(a, b) {
+  return a + b;
+}
+
+function mul(a, b) {
+  return a * b;
+}
+
+export default {
+  sum,
+  mul,
+};
+```
+
+打包产物:
+
+```js
+(() => {
+  "use strict";
+  var __webpack_modules__ = {
+    "./util/math.js": (
+      __unused_webpack_module,
+      __webpack_exports__,
+      __webpack_require__
+    ) => {
+      __webpack_require__.r(__webpack_exports__);
+      __webpack_require__.d(__webpack_exports__, {
+        default: () => __WEBPACK_DEFAULT_EXPORT__,
+      });
+      function sum(a, b) {
+        return a + b;
+      }
+
+      function mul(a, b) {
+        return a * b;
+      }
+
+      const __WEBPACK_DEFAULT_EXPORT__ = {
+        sum,
+        mul,
+      };
+    },
+  };
+
+  var __webpack_module_cache__ = {};
+  // 和commonjs打包结果类似, exports赋值, 写入缓存, 返回module.exports
+  function __webpack_require__(moduleId) {
+    var cachedModule = __webpack_module_cache__[moduleId];
+    if (cachedModule !== undefined) {
+      return cachedModule.exports;
+    }
+    // 缓存
+    var module = (__webpack_module_cache__[moduleId] = {
+      exports: {},
+    });
+    // exports复制
+    __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+
+    return module.exports;
+  }
+
+  (() => {
+    // define 这里
+    __webpack_require__.d = (exports, definition) => {
+      for (var key in definition) {
+        // 如果definition hasOwnProperty, module.exports没有该属性, 这里是default熟悉
+        if (
+          __webpack_require__.o(definition, key) &&
+          !__webpack_require__.o(exports, key)
+        ) {
+          // 将__webpack_modules__中的属性代理到module.exports中, 和commonjs不同, 不是简单的复制
+          Object.defineProperty(exports, key, {
+            enumerable: true,
+            get: definition[key],
+          });
+        }
+      }
+    };
+  })();
+
+  (() => {
+    __webpack_require__.o = (obj, prop) =>
+      Object.prototype.hasOwnProperty.call(obj, prop);
+  })();
+
+  (() => {
+    // 给当前module.exports添加标识ESM属性
+    __webpack_require__.r = (exports) => {
+      // 如果浏览器支持Symbol数据类型, 还会添加一个
+      if (typeof Symbol !== "undefined" && Symbol.toStringTag) {
+        Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+      }
+      // 添加__esModule属性
+      Object.defineProperty(exports, "__esModule", { value: true });
+    };
+  })();
+
+  // 缓存对象
+  var __webpack_exports__ = {};
+
+  (() => {
+    __webpack_require__.r(__webpack_exports__);
+    var _util_math__WEBPACK_IMPORTED_MODULE_0__ =
+      __webpack_require__("./util/math.js");
+    // 使用exports映射default对象的方法
+    console.log(_util_math__WEBPACK_IMPORTED_MODULE_0__["default"].sum(10, 20));
+    console.log(_util_math__WEBPACK_IMPORTED_MODULE_0__["default"].mul(10, 20));
+  })();
+})();
+```
+
+可以看到其实和 commonjs 最大的区别是
+
+1. 增加了 esmodule 属性标识
+2. 通过`Object.defineProperty`代理 module.exports 属性代替直接赋值
+3. ~~多了 default~~
+
+### 混用 CommonJs 和 ESModule
+
+同时在项目中使用 CommonJS 和 ESModule 打包结果和上述大同小异, 可以直接示例代码中 esModule 文件夹下的打包产物, 这里不过多赘述.
+
+## devtool in webpack
+
+配置 devtool 能够帮助我们在程序报错更好地定位问题, webpack 中提供了 26 种 devtool 的值, 下面详细介绍下.
+
+# 示例代码
+
+[https://github.com/Mariana-Yui/fe-learn-code/tree/main/learn-webpack/day5](https://github.com/Mariana-Yui/fe-learn-code/tree/main/learn-webpack/day5)
 
 # reference
 

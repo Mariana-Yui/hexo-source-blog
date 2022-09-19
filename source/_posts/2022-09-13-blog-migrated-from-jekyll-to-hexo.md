@@ -36,3 +36,4 @@ hide: true
 [初音未来鼠标指针](https://www.himiku.com/archives/miku-mouse-cursor.html)
 [Hexo Front-matter](https://hexo.io/zh-cn/docs/front-matter)
 [Hexo Permalinks](https://hexo.io/docs/permalinks.html)
+[博客增加更新时间](http://www.pplong.top/2022/04/07/Hexo-Fluid-%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%BF%AE)

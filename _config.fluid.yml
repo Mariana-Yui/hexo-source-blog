@@ -20,8 +20,12 @@ post:
       enable: true
     date:  # 文章日期，优先根据 front-matter 里 date 字段，其次是 md 文件日期
       enable: true
-      format: "dddd, MMMM Do YYYY, h:mm a"  # 格式参照 ISO-8601 日期格式化
-      # format: "YYYY-MM-DD HH:mm:ss"
+      # format: "dddd, MMMM Do YYYY, hh:mm a"  # 格式参照 ISO-8601 日期格式化
+      format: "YYYY年MM月DD日 a HH:mm"
+    updated:  # 文章日期，优先根据 front-matter 里 date 字段，其次是 md 文件日期
+      enable: true
+      # format: "dddd, MMMM Do YYYY, hh:mm a"  # 格式参照 ISO-8601 日期格式化
+      format: "YYYY年MM月DD日 a HH:mm"
     wordcount:  # 字数统计
       enable: true
       format: "{} 字"  # 显示的文本，{}是数字的占位符（必须包含)，下同
@@ -104,10 +108,11 @@ custom_js:
   - /js/style.js
 custom_css:
   - /css/APlayer.min.css
-  # - /css/mac.css
+  - /css/mac.css
 
 code:
   copy_btn: true
+  fold_btn: true
   highlight:
     enable: true
     line_number: true

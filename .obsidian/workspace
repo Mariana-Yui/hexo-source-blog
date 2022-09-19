@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "cf0d7a3ff54af535",
+        "id": "5a98876a1b2c2180",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -40,8 +40,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#webpack",
-                "matchingCase": false,
+                "query": "export {}",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -144,17 +144,17 @@
     "direction": "horizontal",
     "width": 299.5
   },
-  "active": "cf0d7a3ff54af535",
+  "active": "1e8902e89baf2490",
   "lastOpenFiles": [
+    "source/_posts/2022-09-03-study-webpack-day3.md",
+    "source/_posts/2022-09-15-study-webpack-day5.md",
+    "tag.png",
+    "source/_posts/2022-09-09-study-webpack-day4.md",
     "Day Planners/Day Planner-20220910.md",
     "Day Planners/Day Planner-20220915.md",
     "Day Planners/Day Planner-20220914.md",
-    "source/_posts/2022-09-15-study-webpack-day5.md",
     "source/_posts/2022-09-16.md",
     "source/_posts/2022-09-13-blog-migrated-from-jekyll-to-hexo.md",
-    "source/_posts/2022-09-09-study-webpack-day4.md",
-    "source/_posts/2022-09-03-study-webpack-day3.md",
-    "source/_posts/2022-08-08-obsidian-plugins.md",
-    "template/new-note.md"
+    "source/_posts/2022-08-08-obsidian-plugins.md"
   ]
 }
