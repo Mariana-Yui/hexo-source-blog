@@ -39,6 +39,10 @@ post:
   comments:
     enable: true
     type: disqus
+  mermaid:
+    enable: true
+    specific: true
+    options:
 disqus:
   shortname: mariana-yui-github-io
 footer:
