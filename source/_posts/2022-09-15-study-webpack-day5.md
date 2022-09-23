@@ -2,7 +2,7 @@
 layout: post
 title: webpack学习笔记(5)
 date: 2022-09-15 01:46:28
-update: 2022-09-23 16:38:36
+update: 2022-09-24 01:13:05
 author: Mariana
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663176015964_7082.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663176015964_7082.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -365,7 +365,7 @@ source-map 对于报错信息会详细到某行某列, cheap-source-map 只会�
 
 ### hidden-source-map
 
-会生成 source-map 文件, 但不会在 js 文件中链接, 一般用于前端错误信息上报, 后端通过错误中的行列信息还原出源文件的报错位置.
+会生成 source-map 文件, 但不会在 javascript 文件中链接, 一般用于前端错误信息上报, 后端通过错误中的行列信息还原出源文件的报错位置.
 
 ### nosources-source-map
 
