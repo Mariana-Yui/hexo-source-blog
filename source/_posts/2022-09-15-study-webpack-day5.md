@@ -2,7 +2,7 @@
 layout: post
 title: webpack学习笔记(5)
 date: 2022-09-15 01:46:28
-update: 2022-09-20 01:05:48
+update: 2022-09-22 21:33:23
 author: Mariana
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663176015964_7082.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663176015964_7082.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -282,7 +282,7 @@ devtool 设置为`source-map`后, 打包产物会多出来一个`bundle.js.map`�
 
 ![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663606242302_6243.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
 
-并且在`bundle.js`除了打包的代码外最后还存在
+并且在`bundle.js`最后会添加 source-map 链接
 
 ```
 //# sourceMappingURL=bundle.js.map
@@ -313,7 +313,73 @@ devtool 设置为`source-map`后, 打包产物会多出来一个`bundle.js.map`�
 - names：转换前的所有变量名和属性名。mode 为`development`时代码并没有进行混淆, 变量名和属性名都不变, names 为空数组
 - mappings：记录位置信息的字符串，记录原文件到打包文件的所有映射, 详情可以查阅[阮一峰博客](https://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
 
+默认浏览器会开启 source-map, 配置如图:
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663847472517_2059.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+在浏览器中可以看到 source-map 映射的源文件
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663847580783_1435.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
 ### eval
+
+JavaScript 原生支持的 eval 函数可以在结尾添加类似 source-map 的 sourceURL 用于打包前的源文件, 从而实现映射, 这也是`mode: "development"`的默认 devtool 配置, 但是这样的代码不方便阅读
+
+```
+//# sourceURL=webpack:///./src/index.js?
+```
+
+### inline-source-map
+
+不会再 source-map 文件, 而是以 base64 编码 inline 在打包产物 js 中
+
+```
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVuZGxlLmpzIiwibWFwcGluZ3MiOiI7Ozs7O0FBQUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBLG1EQUFtRDs7QUFFbkQ7O0FBRUEsaUIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanMiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqIG5lY2Vzc2FyeSB3aGlsZSB1c2VCdWlsdEluczogJ2VudHJ5JyAqL1xuLy8gaW1wb3J0ICdjb3JlLWpzL3N0YWJsZSc7XG4vLyBpbXBvcnQgJ3JlZ2VuZXJhdG9yLXJ1bnRpbWUvcnVudGltZSc7XG5cbmNvbnN0IG1lc3NhZ2UgPSAnSGVsbG8gd29ybGQnO1xuY29uc3QgZm9vID0gKG5hbWUpID0+IHtcbiAgY29uc29sZS5sb2cobmFtZSk7XG59O1xuXG5jb25zdCBwcm9taXNlID0gbmV3IFByb21pc2UoKHJlc29sdmUsIHJlamVjdCkgPT4ge30pO1xuXG5mb28obWVzc2FnZSk7XG5cbmNvbnNvbGUubG9nKGFiYyk7Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9
+```
+
+### eval-source-map
+
+顾名思义, 会生成 eval 链接和 sourcep-map 链接
+
+```
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBLG1EQUFtRDs7QUFFbkQ7O0FBRUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJzb3VyY2VzQ29udGVudCI6WyIvKiogbmVjZXNzYXJ5IHdoaWxlIHVzZUJ1aWx0SW5zOiAnZW50cnknICovXG4vLyBpbXBvcnQgJ2NvcmUtanMvc3RhYmxlJztcbi8vIGltcG9ydCAncmVnZW5lcmF0b3ItcnVudGltZS9ydW50aW1lJztcblxuY29uc3QgbWVzc2FnZSA9ICdIZWxsbyB3b3JsZCc7XG5jb25zdCBmb28gPSAobmFtZSkgPT4ge1xuICBjb25zb2xlLmxvZyhuYW1lKTtcbn07XG5cbmNvbnN0IHByb21pc2UgPSBuZXcgUHJvbWlzZSgocmVzb2x2ZSwgcmVqZWN0KSA9PiB7fSk7XG5cbmZvbyhtZXNzYWdlKTtcblxuY29uc29sZS5sb2coYWJjKTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.js
+```
+
+### cheap-source-map
+
+source-map 对于报错信息会详细到某行某列, cheap-source-map 只会精细到行**(网上是这么说的, 虽然我验证的时候设置 source-map 或 cheap-source-map 好像没什么区别)**
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663847377810_2941.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+### cheap-module-source-map
+
+如果源码经过 loader 例如 babel-loader 处理后, 使用 cheap-source-map 会链接到 loader 处理过的文件, 和源码还是有点区别的, 使用 cheap-module-source-map 就会正常指向源文件了.
+这也是 react 官方脚手架本地环境下默认的 devtool 配置.
+
+`cheap-source-map`:
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663850502293_5513.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+`cheap-module-source-map`:
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663850594410_5564.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+### hidden-source-map
+
+会生成 source-map 文件, 但不会在 js 文件中链接, 一般用于前端错误信息上报, 后端通过错误中的行列信息还原出源文件的报错位置.
+
+### nosources-source-map
+
+使用 nosources 关键字生成的 source-map 文件中不包含 sourcesContent 内容, 因此调试时只能看到源文件的行列错误信息, 无法看到源码
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663851512071_8530.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+上面介绍了比较典型的几个 devtool 配置, 理解了每个关键字的含义也就知道如何配置了. 所有的 devtool 配置都是以下几个关键字的排列组合
+
+`[inline-|hidden-|eval][nosources-][cheap-[module-]][source-map]`
+
+下面给出不同环境下的最佳配置:
+
+- 开发/测试环境: `source-map` or `cheap-module-source-map`
+- 线上环境: false or 根据上报需求使用 hidden, nosources
 
 # 示例代码
 
@@ -322,3 +388,4 @@ devtool 设置为`source-map`后, 打包产物会多出来一个`bundle.js.map`�
 # reference
 
 [JavaScript 中的立即执行函数](https://segmentfault.com/a/1190000003902899)
+[一文搞懂 SourceMap 以及 webpack devtool](https://juejin.cn/post/6960941899616092167)
