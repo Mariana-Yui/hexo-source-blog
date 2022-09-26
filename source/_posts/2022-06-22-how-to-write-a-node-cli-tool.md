@@ -2,7 +2,7 @@
 layout: post
 title: 开发nodejs cli过程记录
 date: 2022-06-22
-last-modified-date: 2022-08-30
+update: 2022-09-27 01:23:36
 author: Mariana
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662812529872_7464.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662812529872_7464.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -49,12 +49,12 @@ commandExists.sync('ls')
 以下是小 demo 及运行输出:
 
 ```js
-const ora = require('ora');
-const spinner = ora('default text').start('default text 2');
+const ora = require("ora");
+const spinner = ora("default text").start("default text 2");
 // spinner.text = 'Loading rainbows';
-spinner.info('hello world');
-spinner.succeed('hello world');
-spinner.fail('hello world');
+spinner.info("hello world");
+spinner.succeed("hello world");
+spinner.fail("hello world");
 spinner.succeed();
 ```
 
@@ -99,18 +99,18 @@ yarn info package-name version --json
 先看下如何使用 spawn
 
 ```js
-const { spawn } = require('child_process');
-const ls = spawn('ls', ['-la'], {});
+const { spawn } = require("child_process");
+const ls = spawn("ls", ["-la"], {});
 ```
 
 1. spawn 第三个参数中`stdio`默认值为 `pipe`, 相当于`相当于 ['pipe', 'pipe', 'pipe']`, 对应`stdin`, `stdout`, `stderr`.
    `pipe`会在子进程和父进程之间创建管道。子进程的标准输入、标准输出和标准错误被重定向到 ChildProcess 对象上相应的 subprocess.stdin、subprocess.stdout 和 subprocess.stderr 流。默认情况下子进程的输出父进程是看不到的, 需要使用以下方式。这里`stdio: 'pipe'`很容易误解
 
 ```js
-ls.stdout.setEncoding('utf8');
+ls.stdout.setEncoding("utf8");
 ls.stdout.pipe(process.stdout);
 // or
-ls.stdout.on('data', function (data) {
+ls.stdout.on("data", function (data) {
   process.stdout.write(data);
 });
 ```
@@ -118,8 +118,9 @@ ls.stdout.on('data', function (data) {
 2. 设置`stdio: 'inherit'`, 通过相应的标准输入输出流传入/传出父进程, 子进程直接使用父进程的流。 在前三个位置，这分别相当于 process.stdin、process.stdout 和 process.stderr。对于说明性的内容可以直接使用`stdio: 'inherit'`, 对于需要处理的输出数据, 默认即可, 通过`stdout.on('data')`处理数据
 
 ```js
-const ls = spawn('ls', ['-la'], { stdio: 'inherit' });
+const ls = spawn("ls", ["-la"], { stdio: "inherit" });
 // 会直接输出ls -la的内容, 无法通过ondata监听stdout, stderr还是可以监听
+// 使用process.stdout无法ondata, 使用ls.stdout.ondata也是会报错的
 ```
 
 ## cwd
@@ -127,7 +128,7 @@ const ls = spawn('ls', ['-la'], { stdio: 'inherit' });
 spawn 第三个参数中支持 cwd 表示子进程命令要运行的目录, 例如`yarn link`就需要指定目录才能正常
 
 ```js
-const child = spawn('yarn', ['link'], { cwd: xx });
+const child = spawn("yarn", ["link"], { cwd: xx });
 ```
 
 ## require.resolve
