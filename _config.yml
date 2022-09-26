@@ -133,8 +133,9 @@ live2d:
     position: right
     width: 250
     height: 500
+    vOffset: -60
   mobile:
-    show: true # 是否在移动设备上显示
+    show: false # 是否在移动设备上显示
     scale: 0.5 # 移动设备上的缩放
   react:
     opacity: 1
