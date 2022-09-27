@@ -2,7 +2,7 @@
 layout: post
 title: pm2线上问题处理记录
 date: 2022-09-27 15:02:05
-update: 2022-09-27 15:49:23
+update: 2022-09-27 16:57:01
 author: Mariana
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662812638863_2436.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662812638863_2436.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -89,8 +89,11 @@ export PM2_HOME='' # 清除变量
 在不同`PM2_HOME`下都能够看到 pm2 对应的服务了
 ![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1664264837766_3422.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
 
+**参考资料 no.4 深入介绍了 copytruncate 机制的 pm2-logrotate 和 sign 机制的 egg-logrotator, 有兴趣的可以看看~**
+
 # reference
 
 1. [Multiple PM2 on the save server](https://pm2.keymetrics.io/docs/usage/specifics/)
 2. [pm2 日志管理 pm2-logrotate 介绍](https://www.cnblogs.com/daner1257/p/10763888.html)
 3. [pm2-logrotate](https://github.com/keymetrics/pm2-logrotate)
+4. [Node.js 应用日志切割原理与踩坑实践](https://juejin.cn/post/6844904151588012039)
