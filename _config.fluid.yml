@@ -103,11 +103,13 @@ favicon: /imgs/favicon.ico
 apple_touch_icon: /imgs/favicon.ico
 
 custom_js:
+  - /js/pre-process-markdown.js
   - /js/cursor-love.js
   - /js/nav-title.js
   - /js/APlayer.min.js
   - /js/play.js
-  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicRibbon.min.js
+  # - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.5/DynamicRibbon.min.js #动态彩带
+  - //cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.5/Ribbon.min.js
   - /js/bg.js
   - /js/style.js
 custom_css:

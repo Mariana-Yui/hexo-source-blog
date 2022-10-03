@@ -9,6 +9,9 @@ tags:
   - webpack
 ---
 
+**2022.10.01 更新: 时隔一年多在 webpack5 下的全新认知. ~~其实是忘得差不多重新学习了下~~ 当然下面的知识并没有过时~**
+[[2022-09-30-study-webpack-day7#publicPath path contentBase in webpack5]]
+
 # path vs. publicPath vs. contentBase
 
 ## output.path

@@ -1,9 +1,9 @@
 {
-  "cssTheme": "Obsidianite",
+  "cssTheme": "Dracula for Obsidian",
   "theme": "obsidian",
   "translucency": false,
   "monospaceFontFamily": "Fira Code",
   "interfaceFontFamily": "",
   "baseFontSize": 14,
-  "textFontFamily": "Monaco"
+  "textFontFamily": "Fira Code,Monaco"
 }
