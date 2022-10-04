@@ -25,8 +25,10 @@ function toggleBgScript() {
   darkCanvas.style.display = "none";
   if (mode === "dark") {
     darkCanvas.style.display = "block";
+    $("body").removeClass("light");
   } else {
     lightCanvas.style.display = "block";
+    $("body").addClass("light");
   }
 }
 
