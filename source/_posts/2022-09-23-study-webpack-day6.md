@@ -2,7 +2,7 @@
 layout: post
 title: webpack学习笔记(6)
 date: 2022-09-23 14:51:05
-update: 2022-09-24 01:22:53
+update: 2022-10-05 23:56:05
 author: Mariana
 mermaid: true
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1663922265931_4053.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -226,7 +226,7 @@ ReactDOM.render(<Home />, document.getElementById("app"));
 
 可以看到正常展示了.
 
-# 实例代码
+# 示例代码
 
 [https://github.com/Mariana-Yui/fe-learn-code/tree/main/learn-webpack/day6](https://github.com/Mariana-Yui/fe-learn-code/tree/main/learn-webpack/day6)
 

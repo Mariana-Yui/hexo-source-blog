@@ -2,7 +2,7 @@
 layout: post
 title: 开发nodejs cli过程记录
 date: 2022-06-22
-update: 2022-09-27 01:23:36
+update: 2022-10-04 23:01:03
 author: Mariana
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662812529872_7464.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662812529872_7464.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -90,7 +90,8 @@ yarn info package-name version --json
 ## process.cwd()和\_\_dirname
 
 这两个命令行的输出在开发 cli 这种全局包中区别尤为明显
-`process.cwd()`: 返回当前工作目录。可以通过`process.chdir()`更改
+
+`process.cwd()`: 返回当前工作目录。可以通过`process.chdir()`更改.
 `__dirname`返回源代码所在的目录。
 
 ## spawn

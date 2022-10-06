@@ -3,8 +3,8 @@ layout: post
 title: vue3初体验
 date: 2021-06-25
 author: Mariana
-banner_img: //raw.githubusercontent.com/Mariana-Yui/images/master/blog-imgs/202205152015678.png
-index_img: //raw.githubusercontent.com/Mariana-Yui/images/master/blog-imgs/202205152015678.png
+banner_img: https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1665050926840_5073.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
+index_img: https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1665050926840_5073.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 tags:
   - webpack
 ---
@@ -39,11 +39,11 @@ const data: Data<T> = reactive({
   double: computed(() => data.count * 2),
   increase: () => {
     data.count++;
-  }
+  },
 });
 const refData = toRefs(data);
 return {
-  ...refData
+  ...refData,
 };
 ```
 

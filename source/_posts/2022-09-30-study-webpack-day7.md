@@ -2,7 +2,7 @@
 layout: post
 title: webpack学习笔记(7)
 date: 2022-09-30 16:36:19
-update: 2022-10-04 02:13:47
+update: 2022-10-06 17:26:01
 author: Mariana
 mermaid: true
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1664356151986_983.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -345,7 +345,7 @@ devServer: {
 
 contentBase 比较好理解, 不是直接通过入口文件引入的文件, 或者是入口文件关联文件中又关联的文件, devServer 就会到 ContentBase 配置的文件目录下寻找. 举个例子:
 
-在 html 文件中引入 js 文件,该文件和入口文件没有直接关系:
+在 html 文件中引入 js 文件,该文件和入口文件没有直接关系, 这里要使用绝对路径, 否则会通过 publicPath 查找:
 
 ```diff
 <body>
@@ -465,6 +465,26 @@ devServer: {
   }
 }
 ```
+
+未配置 proxy 前, 浏览器在`http://localhost:8080/asset/page/`发起跨域请求:
+
+```js
+axios.get("http://localhost:8888/name");
+```
+
+毫无意外浏览器会拦截:
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1664977295429_8174.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+配置 proxy 后, 修改请求为:
+
+```js
+axios.get("/api/name");
+```
+
+浏览器可以正常返回数据:
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1664977379895_4155.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
 
 如果对 nginx 有所了解就会发现, devServer 的 proxy 和 historyApiFallback 其实就是充当了生产环境下的 nginx 配置.
 

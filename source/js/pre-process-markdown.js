@@ -8,7 +8,9 @@ try {
     var $1$Formatten = $1.replace(/\,|\s/g, "-").toLowerCase();
     var href = $1$Formatten;
     if (year && month && day) {
-      `/${year}/${month}/${day}${$1.includes("/") ? "" : "/"}${$1$Formatten}`;
+      href = `/${year}/${month}/${day}${
+        $1.includes("/") ? "" : "/"
+      }${$1$Formatten}`;
     }
     return `<a href="${href}">${$1}</a>`;
   });

@@ -108,6 +108,6 @@ new CopyWebpackPlugin({
 可以看到打包产物 public/下 include 的文件都复制到 build 中了
 <img src="https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662993074608_764.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0" width="400" />
 
-# 实例代码
+# 示例代码
 
 [https://github.com/Mariana-Yui/fe-learn-code/tree/main/learn-webpack/day4](https://github.com/Mariana-Yui/fe-learn-code/tree/main/learn-webpack/day4)
