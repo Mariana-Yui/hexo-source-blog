@@ -2,6 +2,7 @@
 layout: post
 title: 该博客从jekyll迁移到hexo啦!
 date: 2022-09-12 23:01:11
+update: 2022-10-07 18:40:32
 author: Mariana
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662998106504_3868.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662998106504_3868.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -18,7 +19,50 @@ hide: true
 但随着时间推移, 弊端逐渐浮现出来, 由于是 ruby 编写的, 国内使用人群极少, 要找对应的插件十分困难, 最重要的也是迫使我迁移博客的原因还是 jekyll 的 markdown 引擎过于老旧, 许多语法都不支持亦或者是展示出来的效果不尽人意.
 于是值此**中秋佳节**, 花了一天时间把博客迁到了 hexo, hexo 是使用 nodejs 编写的框架, 对应前端工程师来说不管是使用还是日后扩展都十分友好. ~~呐这个就叫做专业~~
 
-#
+# 美化
+
+## 标题打字机效果
+
+fluid 默认配置只设置了打印的速度, 如果开启 loop, 退格速度很快且无法设置退格的速度, 解决方案:
+
+1. 根据`config.yml`逐步找到打字机源码的位置
+
+```js
+var typed = new window.Typed("#subtitle", {
+  strings: ["  ", text + "&nbsp;"],
+  cursorChar: CONFIG.typing.cursorChar,
+  typeSpeed: CONFIG.typing.typeSpeed,
+  loop: CONFIG.typing.loop,
+});
+```
+
+2. 查看[官网](https://github.com/mattboldt/typed.js/)发现可以设置`backSpeed`控制删除速度.
+3. 修改源码
+
+```diff
+var typed = new window.Typed('#subtitle', {
+  strings: [
+    '  ',
+    text + '&nbsp;'
+  ],
+  cursorChar: CONFIG.typing.cursorChar,
+  typeSpeed : CONFIG.typing.typeSpeed,
+  loop      : CONFIG.typing.loop,
++ backSpeed: CONFIG.typing.backSpeed,
+});
+```
+
+4. 修改`_config.yml`
+
+```diff
+fun_features:
+  # 为 subtitle 添加打字机效果
+  # Typing animation for subtitle
+  typing:
+    enable: true
+    //...
++   backSpeed: 70
+```
 
 # reference
 

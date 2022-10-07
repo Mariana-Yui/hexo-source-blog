@@ -2,6 +2,7 @@
  * 根据暗黑/明亮模式切换不同的背景
  * 暗黑 动态线条
  * 明亮 动/静态彩带
+ * 20221007 updated 太卡了 只渲染一个
  */
 // var script$dark = document.createElement('script');
 // // 动态彩带
@@ -20,17 +21,17 @@ var $mask = $(".banner .js-mask");
 
 function toggleBgScript() {
   var mode = document.documentElement.getAttribute("data-user-color-scheme");
-  var canvas = Array.from(document.getElementsByTagName("canvas"));
-  var lightCanvas = canvas.find((v) => !v.id && v.width && v.height);
-  var darkCanvas = canvas.find((v) => v.id.includes("c_n"));
-  lightCanvas.style.display = "none";
-  darkCanvas.style.display = "none";
+  // var canvas = Array.from(document.getElementsByTagName("canvas"));
+  // var lightCanvas = canvas.find((v) => !v.id && v.width && v.height);
+  // var darkCanvas = canvas.find((v) => v.id.includes("c_n"));
+  // lightCanvas.style.display = "none";
+  // darkCanvas.style.display = "none";
   if (mode === "dark") {
-    darkCanvas.style.display = "block";
+    // darkCanvas.style.display = "block";
     $body.removeClass("light");
     $mask.removeClass("light");
   } else {
-    lightCanvas.style.display = "block";
+    // lightCanvas.style.display = "block";
     $body.addClass("light");
     $mask.addClass("light");
   }
