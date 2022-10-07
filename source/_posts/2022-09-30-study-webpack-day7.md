@@ -2,11 +2,11 @@
 layout: post
 title: webpack学习笔记(7)
 date: 2022-09-30 16:36:19
-update: 2022-10-06 17:26:01
+update: 2022-10-07 21:27:43
 author: Mariana
 mermaid: true
-banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1664356151986_983.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
-index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1664356151986_983.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
+banner_img: /imgs/banner/md/2022-09-30-study-webpack-day7.png
+index_img: /imgs/banner/md/2022-09-30-study-webpack-day7.png
 tags:
   - webpack
 ---

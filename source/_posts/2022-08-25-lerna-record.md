@@ -2,10 +2,10 @@
 layout: post
 title: lerna使用记录
 date: 2022-08-25
-update: 2022-10-06 22:23:51
+update: 2022-10-07 21:32:44
 author: Mariana
-banner_img: https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1665066170431_7641.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
-index_img: https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1665066170431_7641.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
+banner_img: /imgs/banner/md/2022-08-25-lerna-record.png
+index_img: /imgs/banner/md/2022-08-25-lerna-record.png
 tags:
   - lerna
 ---
