@@ -156,17 +156,17 @@
     "direction": "horizontal",
     "width": 299.5
   },
-  "active": "0f9abdc4509ffb97",
+  "active": "a16d1c2bbcbb15ea",
   "lastOpenFiles": [
+    "source/_posts/2022-08-25-lerna-record.md",
+    "source/_posts/2022-09-01-study-webpack-day1.md",
+    "source/_posts/2022-09-02-study-webpack-day2.md",
+    "source/_posts/2022-09-03-study-webpack-day3.md",
+    "source/_posts/2022-09-15-study-webpack-day5.md",
     "source/_posts/2022-10-05-study-webpack-day8.md",
     "source/_posts/2021-06-08-vue3-learning-note.md",
     "source/_posts/2021-06-25-path-publicPath-contentBase.md",
     "source/_posts/2022-07-26-vue-slot.md",
-    "source/_posts/2022-09-30-study-webpack-day7.md",
-    "source/_posts/2022-09-23-study-webpack-day6.md",
-    "source/_posts/2022-09-15-study-webpack-day5.md",
-    "source/_posts/2022-09-09-study-webpack-day4.md",
-    "source/_posts/2022-09-03-study-webpack-day3.md",
-    "source/_posts/2022-09-02-study-webpack-day2.md"
+    "source/_posts/2022-09-30-study-webpack-day7.md"
   ]
 }

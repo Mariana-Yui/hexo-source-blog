@@ -2,7 +2,7 @@
 layout: post
 title: webpack学习笔记(8)
 date: 2022-10-05 21:52:00
-update: 2022-10-06 18:14:43
+update: 2022-10-06 22:54:49
 author: Mariana
 mermaid: true
 banner_img: https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1665050505758_5671.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -19,7 +19,7 @@ tags:
 
 首先在**config**目录下新建通用配置文件, 生产环境配置文件, 开发环境配置文件. 现将原先**webpack.config.js**的内容复制到**webpack.common.js**
 
-```
+```js
 config
 ├── webpack.common.js
 ├── webpack.dev.js

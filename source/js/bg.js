@@ -15,6 +15,8 @@
 // script$light.setAttribute('count', '200');
 // script$light.src = 'https://cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.5/DynamicRibbon.min.js';
 // document.body.append(script$light);
+var $body = $("body");
+var $mask = $(".banner .js-mask");
 
 function toggleBgScript() {
   var mode = document.documentElement.getAttribute("data-user-color-scheme");
@@ -25,10 +27,12 @@ function toggleBgScript() {
   darkCanvas.style.display = "none";
   if (mode === "dark") {
     darkCanvas.style.display = "block";
-    $("body").removeClass("light");
+    $body.removeClass("light");
+    $mask.removeClass("light");
   } else {
     lightCanvas.style.display = "block";
-    $("body").addClass("light");
+    $body.addClass("light");
+    $mask.addClass("light");
   }
 }
 
