@@ -2,13 +2,15 @@
 layout: post
 title: pm2线上问题处理记录
 date: 2022-09-27 15:02:05
-update: 2022-10-07 21:29:14
+update: 2022-10-09 20:55:18
 author: Mariana
 banner_img: /imgs/banner/md/2022-09-27-pm2-online-issue-record.png
 index_img: /imgs/banner/md/2022-09-27-pm2-online-issue-record.png
 tags:
   - nodejs
   - pm2
+categories:
+  - nodejs
 ---
 
 # 背景

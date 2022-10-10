@@ -21,17 +21,17 @@ var $mask = $(".banner .js-mask");
 
 function toggleBgScript() {
   var mode = document.documentElement.getAttribute("data-user-color-scheme");
-  // var canvas = Array.from(document.getElementsByTagName("canvas"));
-  // var lightCanvas = canvas.find((v) => !v.id && v.width && v.height);
-  // var darkCanvas = canvas.find((v) => v.id.includes("c_n"));
-  // lightCanvas.style.display = "none";
-  // darkCanvas.style.display = "none";
+  var canvas = Array.from(document.getElementsByTagName("canvas"));
+  var lightCanvas = canvas.find((v) => !v.id && v.width && v.height);
+  var darkCanvas = canvas.find((v) => v.id.includes("c_n"));
+  lightCanvas.style.display = "none";
+  darkCanvas.style.display = "none";
   if (mode === "dark") {
-    // darkCanvas.style.display = "block";
+    darkCanvas.style.display = "block";
     $body.removeClass("light");
     $mask.removeClass("light");
   } else {
-    // lightCanvas.style.display = "block";
+    lightCanvas.style.display = "block";
     $body.addClass("light");
     $mask.addClass("light");
   }

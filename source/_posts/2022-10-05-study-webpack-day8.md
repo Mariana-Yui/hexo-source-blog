@@ -2,12 +2,14 @@
 layout: post
 title: webpack学习笔记(8)
 date: 2022-10-05 21:52:00
-update: 2022-10-07 21:21:08
+update: 2022-10-09 20:55:05
 author: Mariana
 mermaid: true
 banner_img: /imgs/banner/md/2022-10-05-study-webpack-day8.png
 index_img: /imgs/banner/md/2022-10-05-study-webpack-day8.png
 tags:
+  - webpack
+categories:
   - webpack
 ---
 
@@ -137,7 +139,7 @@ module.exports = {
 
 打包结果可以看到第三方库代码被单独打包了.
 
-![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1665044132744_330.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1665149736641_3749.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
 
 #### SplitChunksPlugin
 

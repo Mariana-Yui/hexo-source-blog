@@ -7,6 +7,8 @@ banner_img: /imgs/banner/md/2022-09-02-study-webpack-day2.png
 index_img: /imgs/banner/md/2022-09-02-study-webpack-day2.png
 tags:
   - webpack
+categories:
+  - webpack
 ---
 
 # 学习笔记

@@ -2,11 +2,13 @@
 layout: post
 title: webpack学习笔记(5)
 date: 2022-09-15 01:46:28
-update: 2022-10-07 21:30:17
+update: 2022-10-09 20:54:52
 author: Mariana
 banner_img: /imgs/banner/md/2022-09-15-study-webpack-day5.png
 index_img: /imgs/banner/md/2022-09-15-study-webpack-day5.png
 tags:
+  - webpack
+categories:
   - webpack
 ---
 

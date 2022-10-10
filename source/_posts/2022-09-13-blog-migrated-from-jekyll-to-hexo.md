@@ -2,7 +2,7 @@
 layout: post
 title: 该博客从jekyll迁移到hexo啦!
 date: 2022-09-12 23:01:11
-update: 2022-10-07 18:40:32
+update: 2022-10-09 20:51:13
 author: Mariana
 banner_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662998106504_3868.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
 index_img: //dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1662998106504_3868.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0
@@ -63,6 +63,10 @@ fun_features:
     //...
 +   backSpeed: 70
 ```
+
+## jsdelivr with github
+
+[使用 github 结合 jsdelivr 搭建免费 CDN 仓库](https://developer.aliyun.com/article/920046)
 
 # reference
 

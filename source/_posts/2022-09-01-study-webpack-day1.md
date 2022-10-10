@@ -7,6 +7,8 @@ banner_img: /imgs/banner/md/2022-09-01-study-webpack-day1.png
 index_img: /imgs/banner/md/2022-09-01-study-webpack-day1.png
 tags:
   - webpack
+categories:
+  - webpack
 ---
 
 # 引言

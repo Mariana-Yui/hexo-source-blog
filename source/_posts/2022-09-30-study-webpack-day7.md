@@ -2,12 +2,14 @@
 layout: post
 title: webpack学习笔记(7)
 date: 2022-09-30 16:36:19
-update: 2022-10-07 21:27:43
+update: 2022-10-09 20:55:01
 author: Mariana
 mermaid: true
 banner_img: /imgs/banner/md/2022-09-30-study-webpack-day7.png
 index_img: /imgs/banner/md/2022-09-30-study-webpack-day7.png
 tags:
+  - webpack
+categories:
   - webpack
 ---
 
