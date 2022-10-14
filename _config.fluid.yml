@@ -124,7 +124,7 @@ code:
     line_number: true
     lib: "highlightjs"
     highlightjs:
-      style: 'Github Dark Dimmed' #'Atom One Dark Reasonable' #'Night Owl' #'Github Gist'
+      style: 'Atom One Dark Reasonable' #'Github Dark Dimmed' #'Night Owl' #'Github Gist'
       bg_color: true
     prismjs:
       style: "default"

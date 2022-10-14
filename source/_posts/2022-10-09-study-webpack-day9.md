@@ -287,6 +287,137 @@ module.exports = {
 };
 ```
 
+## Terser
+
+webpack4 使用`uglify-js`(**uglifyjs-webpack-plugin**)来压缩, 丑化代码, 目前该库已不再维护.
+webpack5 使用`terser`(**terser-webpack-plugin**)来对代码进行压缩丑化; `terser`本就是由`uglify-js`fork 而来, 所以保留了`uglify-js`大部分的 API 用法.
+
+`terser`可以在终端单独使用, 首先安装:
+
+`yarn add -D terser`
+
+执行
+
+`npx terser input.js -o output.js -c -m`
+
+默认`terser`的输出文件只会将多余空格即换行去除, 如果需要进行压缩, 丑化, 保留函数名, 保留类名, 去除僵尸代码等, 可以参考[官网](https://github.com/terser/terser)对应配置
+
+接下来看下 webpack 中是如何使用`terser`的:
+webpack 内置了**terser-webpack-plugin**插件进行上述操作.
+事实上, 在真实开发中个, 在 production 下, 默认会开启 terser 插件处理代码;
+如果对默认的配置不满意, 可以在`optimization.minimizer`中配置, 这里列出 webpack 官网的配置示例, 其中**deprecate**的挪到 compress 对象中配置:
+
+```js
+module.exports = {
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          ecma: undefined,
+          parse: {},
+          compress: {},
+          mangle: true, // Note `mangle.properties` is `false` by default.
+          module: false,
+          // Deprecated
+          output: null,
+          format: null,
+          toplevel: false,
+          nameCache: null,
+          ie8: false,
+          keep_classnames: undefined,
+          keep_fnames: false,
+          safari10: false,
+        },
+      }),
+    ],
+  },
+};
+```
+
+具体字段含义和`terser`参数一致, 参考[官网](https://github.com/terser/terser).
+这里只介绍一个对博主实际工作中很有用的配置**dead_code**, 该配置含义是 remove unreachable code, 即删除永远不会执行的逻辑, 默认值为`true`, 不用手动设置.
+举个实际案例, 如果有段逻辑, 需要在正式环境执行, 不想在开发环境执行, 并且不想生成 dead_code, 可以怎么做呢?
+
+在入口文件中引入该逻辑:
+
+```js
+if (process.env.NODE_ENV === "production") {
+  console.log("can reach here!");
+}
+```
+
+webpack 中配置**DefinePlugin**和**TerserPlugin**:
+
+```js
+module.exports = {
+  mode: "production",
+  //...
+  plugins: [
+    //...
+    new DefinePlugin({
+      "process.env.NODE_ENV": '"production"',
+    }),
+  ],
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        //...
+      }),
+    ],
+  },
+};
+```
+
+打包结果可以看到对应代码有参与打包:
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1665717927158_90.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+把环境改为开发环境:
+
+```diff
+module.exports = {
+-  mode: 'production',
++  mode: 'development',
+  //...
+  plugins: [
+    //...
+    new DefinePlugin({
+-      'process.env.NODE_ENV': '"production"',
++      'process.env.NODE_ENV': '"development"',
+    }),
+  ],
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        //...
+      })
+    ]
+  }
+}
+```
+
+可以看到没有对应代码.
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1665718100334_3984.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+## Css Compress
+
+除了 js 压缩外, 另外一种最常见的代码压缩是 css; css 压缩通常是去除无用的空格, 无法做丑化, 因为很难修改选择器, 属性名称等.
+css 压缩使用`css-minimizer-webpack-plugin`插件, 和`mini-css-extract-plguin`单独生成 css 文件一起使用.
+
+## Scope Hoisting
+
+作用域提升. 导入的模块生成打包产物会生成大量 IIFE 函数, 作用域提升用于删除无用的 IIFE 函数包裹, 进一步减少代码量, 提升运行速度. 生产环境下默认开启, 开发环境开启需要手动配置.
+
+webpack 配置:
+
+```js
+plugins: [webpack.optimization.ModuleConcatenationPlugin()];
+```
+
+该插件内部依赖 ESM 静态分析, 所以导入模块时最好都使用 ESM import.
+
 # 示例代码
 
 # reference
@@ -294,3 +425,4 @@ module.exports = {
 1. [webpack 中，hash、chunkhash、contenthash 的区别是什么？](https://www.cnblogs.com/skychx/p/webpack-hash-chunkhash-contenthash.html)
 2. [辛辛苦苦学会的 webpack dll 配置，可能已经过时了](https://juejin.cn/post/6844903952140468232)
 3. [webpack5 中的 cache 配置替代 hard-source-webpack-plugin](https://webpack.js.org/configuration/cache/#cache)
+4. [terser 参数配置](https://github.com/terser/terser)
