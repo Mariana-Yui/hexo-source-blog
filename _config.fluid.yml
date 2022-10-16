@@ -1,5 +1,19 @@
 navbar:
   blog_title: Mariana's Blog
+  menu:
+    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
+    - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
+    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
+    - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
+    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { 
+        key: "custom",
+        icon: "iconfont icon-list",
+        submenu: [
+          { key: '代码块默认字体', icon: 'iconfont icon-pencil', callback: "() => { var pre = $('.markdown-body pre'); var code = $('.markdown-body code'); $('.markdown-body code').css('font-family', code.css('font-family').replace(/'?dm'?,?/, '')); $('.markdown-body pre').addClass('default') }" }
+        ]
+      }
+    #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 lazyload:
   enable: true
   loading_img: /imgs/loading.gif
@@ -113,6 +127,7 @@ custom_js:
   - /js/bg.js
   - /js/style.js
 custom_css:
+  - /css/dank-mono.css
   - /css/APlayer.min.css
   - /css/mac.css
 
@@ -136,3 +151,5 @@ banner:
 fun_features:
   typing: # 为 subtitle 添加打字机效果
     loop: true # 是否循环播放效果
+font:
+  code_font_size: 100%
