@@ -2,7 +2,7 @@
 layout: post
 title: webpack学习笔记(9)
 date: 2022-10-09 20:52:33
-update: 2022-10-11 01:10:39
+update: 2022-10-23 20:07:18
 author: Mariana
 mermaid: true
 banner_img: /imgs/banner/md/2022-10-09-study-webpack-day-9.jpeg
@@ -408,7 +408,7 @@ css 压缩使用`css-minimizer-webpack-plugin`插件, 和`mini-css-extract-plgui
 
 ## Scope Hoisting
 
-作用域提升. 导入的模块生成打包产物会生成大量 IIFE 函数, 作用域提升用于删除无用的 IIFE 函数包裹, 进一步减少代码量, 提升运行速度. 生产环境下默认开启, 开发环境开启需要手动配置.
+作用域提升. 最普遍的例子就是导入的模块生成打包产物会生成大量 IIFE 函数如[[2022-09-15-study-webpack-day5#CommonJS 模块化实现原理]]中的`__webpack_exports__`, 作用域提升用于删除无用的 IIFE 函数包裹, 进一步减少代码量, 提升运行速度. 生产环境下默认开启, 开发环境开启需要手动配置.
 
 webpack 配置:
 
@@ -418,7 +418,19 @@ plugins: [webpack.optimization.ModuleConcatenationPlugin()];
 
 该插件内部依赖 ESM 静态分析, 所以导入模块时最好都使用 ESM import.
 
+开启前:
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1666526652002_3241.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+开启后:
+
+![](https://dev.azure.com/HealMSlin/8544be09-1224-4eb0-824b-90c4ec9d49ee/_apis/git/repositories/7a27a721-4c93-4ecf-8258-d5422217b60a/items?path=%2F1666526769317_1254.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
+
+可以看到开启作用域前后的产物大小提升还是非常大的
+
 # 示例代码
+
+[https://github.com/Mariana-Yui/fe-learn-code/tree/main/learn-webpack/day9](https://github.com/Mariana-Yui/fe-learn-code/tree/main/learn-webpack/day9)
 
 # reference
 

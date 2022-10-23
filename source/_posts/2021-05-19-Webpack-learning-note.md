@@ -114,13 +114,13 @@ module.exports = {
 如果要使用 `MinCssExtractPlugin` 需要下载插件并配置
 
 ```js
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // ...省略上面的配置
 plugin: {
   new MiniCssExtractPlugin({
-    filename: '[name].[hash].css',
-    chunkFilename: '[id].css'
+    filename: "[name].[hash].css",
+    chunkFilename: "[id].css",
   });
 }
 ```
@@ -156,7 +156,7 @@ plugin: {
 ```js
 {
   test: /\.vue$/;
-  use: ['vue-loader'];
+  use: ["vue-loader"];
 }
 ```
 
@@ -239,6 +239,7 @@ _tips:_
 对于没有匹配到的包, 默认兜底到 default 组中, 不配置`cacheGroup`时默认会存在一个匹配 node_modules 的 `vendors` 组.
 `reuseExistingChunk`则是配置是否服用之前已经缓存的相同包内容.
 对于匹配到多个组的包, 会根据 `priority`优先级大小分到优先级最高的组.
+**需要注意的是, cacheGroups 中配置的字段优先级大于外层 splitChunks 相同字段的值~**
 
 ```js
 cacheGroups: {
@@ -283,7 +284,7 @@ extensions: ['*', '.js', '.json', '.vue'],
 缺省文件名, 这回文件都不用写了.. import from 路径最后一级为目录时, webpack 会寻找目录下和 `mainFiles`匹配的文件名
 
 ```js
-mainFiles: ['index', 'main'];
+mainFiles: ["index", "main"];
 ```
 
 ### devServer
@@ -300,16 +301,16 @@ mainFiles: ['index', 'main'];
 // ...省略其他配置
 [
   new HtmlWebpackPlugin({
-    template: '/your/template/html/file/path',
-    filename: 'index.html',
+    template: "/your/template/html/file/path",
+    filename: "index.html",
     // 忽略此项则全部引入
-    chunks: ['app']
+    chunks: ["app"],
   }),
   new HtmlWebpackPlugin({
-    template: 'your/template/html/file/path',
-    filename: 'main.html',
-    chunks: ['main']
-  })
+    template: "your/template/html/file/path",
+    filename: "main.html",
+    chunks: ["main"],
+  }),
 ];
 ```
 
@@ -329,8 +330,8 @@ new CleanWebpackPlugin();
 
 ```js
 new MiniCssExtractPlugin({
-  filename: '[name].[hash].css', // 有指定entry的output文件名
-  chunkFilename: '[id].css' // 未指定entry的output文件名
+  filename: "[name].[hash].css", // 有指定entry的output文件名
+  chunkFilename: "[id].css", // 未指定entry的output文件名
 });
 ```
 
@@ -357,9 +358,9 @@ new webpack.HotModuleReplacementPlugin();
 ```js
 new webpack.ProvidePlugin({
   // 自动引入jquery
-  $: 'jquery',
+  $: "jquery",
   // 自动引入lodash库中join方法
-  _join: ['lodash', 'join']
+  _join: ["lodash", "join"],
 });
 ```
 
@@ -374,21 +375,21 @@ new webpack.ProvidePlugin({
 
 ```js
 module.exports = {
-  mode: 'production',
+  mode: "production",
   // entry为需要打包的库文件名
-  entry: ['react', 'react-dom', 'lodash'],
+  entry: ["react", "react-dom", "lodash"],
   // output的library是打包后库的名称
   output: {
-    filename: '[name].dll.js',
-    path: path.resolve(__dirname, './dll'),
-    library: '[name]'
+    filename: "[name].dll.js",
+    path: path.resolve(__dirname, "./dll"),
+    library: "[name]",
   },
   plugins: [
     new webpack.DllPlugin({
-      name: '[name].manifest.json',
-      path: path.resolve(__dirname, './dll')
-    })
-  ]
+      name: "[name].manifest.json",
+      path: path.resolve(__dirname, "./dll"),
+    }),
+  ],
 };
 ```
 
@@ -397,7 +398,7 @@ module.exports = {
 ```js
 new webpack.DllReferencePlugin({
   // 传入映射文件
-  manifest: path.resolve(__dirname, '../dll/vendors.manifest.json')
+  manifest: path.resolve(__dirname, "../dll/vendors.manifest.json"),
 });
 ```
 
@@ -407,7 +408,7 @@ new webpack.DllReferencePlugin({
 
 ```js
 new AddAssetHtmlWebpackPlugin({
-  filepath: path.resolve(__dirname, '../bundle.dll.js')
+  filepath: path.resolve(__dirname, "../bundle.dll.js"),
 });
 ```
 
@@ -427,16 +428,16 @@ webpack 打包库文件需要在`output`额外加上`library`和`libraryTarget`�
 
 ```js
 module.exports = {
-  mode: 'production',
-  entry: './src/index.js',
+  mode: "production",
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'library.js',
-    library: 'library',
-    libraryTarget: 'umd',
-    globalObject: 'this'
+    path: path.resolve(__dirname, "./dist"),
+    filename: "library.js",
+    library: "library",
+    libraryTarget: "umd",
+    globalObject: "this",
   },
-  externals: ['lodash']
+  externals: ["lodash"],
 };
 ```
 
@@ -447,7 +448,7 @@ webpack 除了可以输出对象, 也可以输出函数, 参数为环境变量, 
 [env 动态配置环境](https://webpack.docschina.org/api/cli/#env)
 
 ```js
-const merge = require('webpack-merge');
+const merge = require("webpack-merge");
 // 省略其他配置
 // webpack --env.production --config webpack.config.js
 // 此时env就存在production属性, 也可以指定production的值(--env production=xxx)

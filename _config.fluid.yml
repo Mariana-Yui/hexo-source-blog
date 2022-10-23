@@ -10,7 +10,7 @@ navbar:
         key: "custom",
         icon: "iconfont icon-list",
         submenu: [
-          { key: '代码块默认字体', icon: 'iconfont icon-pencil', callback: "() => { var pre = $('.markdown-body pre'); var code = $('.markdown-body code'); $('.markdown-body code').css('font-family', code.css('font-family').replace(/'?dm'?,?/, '')); $('.markdown-body pre').addClass('default') }" }
+          { key: '代码块默认字体', icon: 'iconfont icon-pencil', callback: "() => { var pre = $('.markdown-body pre'); var code = $('.markdown-body code');   $('.markdown-body code').css('font-family', code.css('font-family').replace(/'?dm'?,?/, '')); $('.markdown-body pre').addClass('default') }" }
         ]
       }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
