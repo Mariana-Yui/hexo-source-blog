@@ -42,3 +42,13 @@ jQuery("figure.highlight").click(function (e) {
 jQuery("figure.highlight").each((idx, val) => {
   $(val).addClass("fold");
 });
+
+// 10s还没加载图片 手动吧srcset去掉
+setTimeout(() => {
+  for (const each of document.querySelectorAll("img[lazyload]")) {
+    if (each.hasAttribute("srcset")) {
+      each.removeAttribute("srcset");
+      each.removeAttribute("lazyload");
+    }
+  }
+}, 1000 * 10);
