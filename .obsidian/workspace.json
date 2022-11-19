@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "9cc2ff89eca20e65",
+    "type": "split",
+    "children": [
+      {
+        "id": "59389aac02d137d1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "943a0f5de77068f5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/2022-10-23-study-webpack-day10.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "c26db23676fce4ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c66151caeac383d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/2022-10-23-study-webpack-day10.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "51ba7a65251da367",
+    "type": "split",
+    "children": [
+      {
+        "id": "2aa14824d24970c5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e8902e89baf2490",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3b91614d15f5d652",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b1f3fd2947d03216",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 273
+  },
+  "right": {
+    "id": "0ecbdedd3702dea2",
+    "type": "split",
+    "children": [
+      {
+        "id": "2374c29b965d5464",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3489385611e65bd2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "source/_posts/2022-10-23-study-webpack-day10.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1290af388bf26b1a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "source/_posts/2022-10-23-study-webpack-day10.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3dde559aa0930cea",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "60e8e9f748ed771c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "f67e0e9f597cae38",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      },
+      {
+        "id": "ebb2b84882963762",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dc849a540f1143d0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "source/_posts/2022-10-23-study-webpack-day10.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 299.5
+  },
+  "active": "1e8902e89baf2490",
+  "lastOpenFiles": [
+    "source/_posts/2022-10-23-study-webpack-day10.md",
+    "source/_posts/2022-09-09-study-webpack-day4.md",
+    "source/_posts/2022-10-09-study-webpack-day9.md",
+    "source/_posts/2022-11-12.md",
+    "node_modules/hexo-helper-live2d/CHANGELOG.md",
+    "source/imgs/sllh2.jpeg",
+    "source/imgs/avatar_anime.jpg",
+    "source/_posts/2022-09-23-study-webpack-day6.md",
+    "source/_posts/2022-09-15-study-webpack-day5.md",
+    "source/_posts/2022-09-13-blog-migrated-from-jekyll-to-hexo.md"
+  ]
+}

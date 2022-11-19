@@ -2,7 +2,7 @@
 layout: post
 title: webpack学习笔记(6)
 date: 2022-09-23 14:51:05
-update: 2022-10-09 20:54:57
+update: 2022-10-31 00:11:39
 author: Mariana
 mermaid: true
 banner_img: /imgs/banner/md/2022-09-23-study-webpack-day6.png
@@ -59,7 +59,7 @@ foo(message);
 一张图介绍 babel 的底层原理, 可以通过[在线工具(https://esprima.org/demo/parse.html)查看转换结果
 
 ```mermaid
-graph TD
+graph TB
 A[ES6+源代码] --> B[词法分析<br>Lexical Analysis]
 B --> C[生成token数组]
 C --> D[语法分析<br>Syntactic Analysis]
