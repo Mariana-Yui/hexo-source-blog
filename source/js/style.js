@@ -39,9 +39,9 @@ jQuery("figure.highlight").click(function (e) {
   }
 });
 
-jQuery("figure.highlight").each((idx, val) => {
-  $(val).addClass("fold");
-});
+// jQuery("figure.highlight").each((idx, val) => {
+//   $(val).addClass("fold");
+// });
 
 // 10s还没加载图片 手动吧srcset去掉
 setTimeout(() => {

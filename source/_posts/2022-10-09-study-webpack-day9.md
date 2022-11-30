@@ -2,7 +2,7 @@
 layout: post
 title: webpack学习笔记(9)
 date: 2022-10-09 20:52:33
-update: 2022-10-23 20:07:18
+update: 2022-11-20 01:35:30
 author: Mariana
 mermaid: true
 banner_img: /imgs/banner/md/2022-10-09-study-webpack-day-9.jpeg
@@ -268,12 +268,13 @@ module.exports = (env) => {
 
 设置 filename 时, webpack 提供了**hash**, **chunkhash**, **contenthash**三种哈希值, 具体含义参考[webpack 中，hash、chunkhash、contenthash 的区别是什么？](https://www.cnblogs.com/skychx/p/webpack-hash-chunkhash-contenthash.html) 这篇文章已经写的很详细了, 总结来说: 入口文件名用**chunkhash**, 模块文件名用**contenthash**.
 
-## DLL
+## DLL -> 自带 cache
 
 Dynamic Link Library, 动态链接库, 这是 wiki 上的含义. 在 webpack 中指将不常用的代码打包成库文件, 可共享用于别的项目代码中. **webpack4 之后 React/Vue 都不再使用 DLL, 因为 webpack 的性能足够优秀, 不需要再使用 DLL 文件**, 这里做了解即可. 如果实际开发中真的要用到也建议使用`autodll-webpack-plugin`.
 
 实际上 webpack4 中存在`hard-source-webpack-plugin`库做缓存, 第一次运行构建时间慢, 后续构建就很快了.
 webpack5 内置了**cache**配置做缓存优化构建时间, 同样也是第一次构建时间较慢, 后续快.
+缓存**module**和**chunk**目录默认为`node_modules/.cache/webpack/default-production**`, 可以通过修改**name**更换目录名
 
 配置:
 
@@ -283,6 +284,7 @@ module.exports = {
   cache: {
     type: "filesystem",
     allowCollectingMemory: true,
+    name: "",
   },
 };
 ```
@@ -438,3 +440,4 @@ plugins: [webpack.optimization.ModuleConcatenationPlugin()];
 2. [辛辛苦苦学会的 webpack dll 配置，可能已经过时了](https://juejin.cn/post/6844903952140468232)
 3. [webpack5 中的 cache 配置替代 hard-source-webpack-plugin](https://webpack.js.org/configuration/cache/#cache)
 4. [terser 参数配置](https://github.com/terser/terser)
+5. [Webpack5 新特性业务落地实战](https://zhuanlan.zhihu.com/p/348612482)
