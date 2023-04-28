@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 前端工作日常问题记录
+title: 前端工作日常问题和易忘点记录
 date: 2022-11-24 16:21:13
-update: 2022-11-30 10:56:47
+update: 2023-04-28 11:44:08
 author: Mariana
 banner_img: /imgs/banner/md/2022-11-24-daily-record-from-oct-to-dec.jpeg
 index_img: /imgs/banner/md/2022-11-24-daily-record-from-oct-to-dec.jpeg
@@ -11,6 +11,7 @@ tags:
   - 问题记录
 categories:
   - 工作
+sticky: 100
 ---
 
 # 背景
