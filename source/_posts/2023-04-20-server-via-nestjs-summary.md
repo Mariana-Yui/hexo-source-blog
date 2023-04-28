@@ -1,8 +1,8 @@
 ---
 layout: post
 title: nestjs开发及流水线相关问题记录
-date: 2023-04-20 17:12:02
-update: 2023-04-28 11:44:08
+date: 2023-04-28 17:12:02
+update: 2023-04-28 17:12:02
 author: Mariana
 banner_img: /imgs/banner/md/2023-04-20-server-via-nestjs-develop-summary.jpeg
 index_img: /imgs/banner/md/2023-04-20-server-via-nestjs-develop-summary.jpeg
