@@ -2,7 +2,7 @@
 layout: post
 title: 前端工作日常问题和易忘点记录
 date: 2022-11-24 16:21:13
-update: 2023-04-28 11:44:08
+update: 2023-05-12 15:57:44
 author: Mariana
 banner_img: /imgs/banner/md/2022-11-24-daily-record-from-oct-to-dec.jpeg
 index_img: /imgs/banner/md/2022-11-24-daily-record-from-oct-to-dec.jpeg
@@ -294,7 +294,14 @@ SIGN=P2E#xWehFZc
 SIGN='P2E#xWehFZc'
 ```
 
-``
+## iframe
+
+```typescript
+// 父页面 -> 子页面, iframe为iframe DOM节点
+iframe.contentWindow.postMessage(data, {});
+// 子页面 -> 父页面
+window.parent.postMessage(data, {});
+```
 
 # 问题
 

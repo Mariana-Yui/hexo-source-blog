@@ -4,29 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "2f7ba902f88d7153",
+        "id": "fa7dc0297173578f",
         "type": "tabs",
         "children": [
           {
-            "id": "07243d2afce759ee",
+            "id": "c767c32ffb30bb37",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/2023-05-08-standard-version-source-code-analysis.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
       },
       {
-        "id": "91a6159bc4681e35",
+        "id": "b854f987925569aa",
         "type": "tabs",
         "children": [
           {
-            "id": "805be62abbaa1456",
+            "id": "3aee35d73147e2c1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/2023-05-08-standard-version-source-code-analysis.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -58,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "server-via-nestjs",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,9 +82,16 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "9fb287e2459acfb8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -96,6 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "source/_posts/2023-05-08-standard-version-source-code-analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,6 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "source/_posts/2023-05-08-standard-version-source-code-analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +173,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "source/_posts/2023-05-08-standard-version-source-code-analysis.md"
+              }
             }
           }
         ]
@@ -176,31 +195,35 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "805be62abbaa1456",
+  "active": "3aee35d73147e2c1",
   "lastOpenFiles": [
-    "public/2023/04/20/2023-04-20-server-via-nestjs-summary/index.html",
-    "public/2023/04/20/2023-04-20-server-via-nestjs-summary",
-    "public/2023/04/20",
-    "public/2023/04",
-    "public/2023",
-    "public/archives/2023/04/index.html",
-    "public/archives/2023/index.html",
-    "public/archives/2023/04",
-    "public/archives/2023",
-    "source/_posts/2023-04-20-server-via-nestjs-summary.md",
-    "public/archives/2020/index.html",
-    "public/js/utils.js",
-    "public/live2dw/assets/nepmaid/textures/02.png",
-    "public/live2dw/assets/nepmaid/textures/01.png",
-    "public/live2dw/assets/nepmaid/textures/00.png",
-    "public/imgs/banner/md/2023-04-28-write-a-webpack5-plugin.jpeg",
-    "public/imgs/banner/md/2022-11-24-daily-record-from-oct-to-dec.jpeg",
+    "public/imgs/banner/mywifu2.png",
+    "public/imgs/banner/category.png",
+    "public/imgs/banner/about.png",
+    "public/imgs/banner/archive.png",
+    "public/imgs/banner/index.png",
+    "public/imgs/loading.gif",
+    "public/imgs/banner/tag.png",
     "public/imgs/banner/md/2023-04-20-server-via-nestjs-summary.jpeg",
-    "public/imgs/banner/md/2022-11-21-study-webpack-day11.jpeg",
-    "public/imgs/banner/md/2022-10-23-study-webpack-day10.jpeg",
-    "public/imgs/banner/md/2022-10-09-study-webpack-day-9.jpeg",
-    "public/imgs/banner/md/2022-10-05-study-webpack-day8.png",
+    "public/imgs/banner/md/2022-09-15-study-webpack-day5.png",
+    "public/imgs/banner/md/2023-04-28-write-a-webpack5-plugin.jpeg",
+    "public/imgs/banner/md/2022-09-03-study-webpack-day3.png",
+    "public/imgs/loading.gif.bak",
+    "public/imgs/favicon.ico",
+    "public/index.html",
+    "public/2023/05/08/2023-05-08-standard-version-source-code-analysis/index.html",
+    "public/2023/04/20/2023-04-20-server-via-nestjs-summary/index.html",
+    "public/2023/05/08/2023-05-08-standard-version-source-code-analysis",
+    "public/2023/04/20/2023-04-20-server-via-nestjs-summary",
+    "public/2023/05/08",
+    "public/2023/04/20",
+    "public/2023/05",
     "source/_posts/2023-04-28-write-a-webpack5-plugin.md",
+    "source/_posts/2023-05-08-standard-version-source-code-analysis.md",
+    "source/_posts/1999-01-30-hello-world.md",
+    "source/_posts/2022-11-24-daily-record-from-oct-to-dec.md",
+    "未命名.canvas",
+    "source/_posts/2023-04-20-server-via-nestjs-summary.md",
     "source/_posts/2023-04-28-server-via-nestjs-summary.md",
     "node_modules/npm-check-updates/lib/package-managers/README.md",
     "node_modules/prismjs/CHANGELOG.md",
@@ -220,9 +243,6 @@
     "node_modules/process-nextick-args/license.md",
     "node_modules/on-headers/README.md",
     "node_modules/on-headers/HISTORY.md",
-    "node_modules/npm-registry-fetch/README.md",
-    "node_modules/npm-registry-fetch/LICENSE.md",
-    "node_modules/npm-registry-fetch/CHANGELOG.md",
-    "node_modules/moment-timezone/changelog.md"
+    "node_modules/npm-registry-fetch/README.md"
   ]
 }

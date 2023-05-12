@@ -2,7 +2,7 @@
 layout: post
 title: webpack5+rollup 开发 plugin
 date: 2022-12-06 10:55:58
-update: 2023-04-28 14:25:44
+update: 2023-05-08 15:03:32
 author: Mariana
 banner_img: /imgs/banner/md/2023-04-28-write-a-webpack5-plugin.jpeg
 index_img: /imgs/banner/md/2023-04-28-write-a-webpack5-plugin.jpeg
@@ -11,6 +11,7 @@ tags:
   - rollup
 categories:
   - webpack
+hide: true
 ---
 
 # 背景
