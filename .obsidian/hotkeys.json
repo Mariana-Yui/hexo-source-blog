@@ -1,13 +1,24 @@
 {
   "workspace:split-vertical": [
     {
-      "modifiers": ["Mod"],
+      "modifiers": [
+        "Mod"
+      ],
       "key": "ArrowRight"
+    },
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowLeft"
     }
   ],
   "editor:toggle-source": [
     {
-      "modifiers": ["Alt", "Mod"],
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
       "key": "E"
     }
   ]

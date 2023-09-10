@@ -2,13 +2,15 @@
 layout: post
 title: standard-version源码分析
 date: 2023-05-08 15:04:09
-update: 2023-05-12 15:55:08
+update: 2023-09-10 18:12:51
 author: Mariana
 banner_img: /imgs/banner/md/2023-05-08-standard-version-source-code-analysis.jpeg
 index_img: /imgs/banner/md/2023-05-08-standard-version-source-code-analysis.jpeg
 tags:
   - 源码分析
   - standard-version
+categories:
+  - 工程化
 ---
 
 # 背景
