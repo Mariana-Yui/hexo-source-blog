@@ -1,10 +1,10 @@
 {
-  "cssTheme": "Blue Topaz",
+  "cssTheme": "AnuPpuccin",
   "theme": "obsidian",
   "translucency": false,
   "monospaceFontFamily": "Fira Code",
-  "interfaceFontFamily": "",
-  "baseFontSize": 14,
-  "textFontFamily": "Fira Code,Monaco",
+  "interfaceFontFamily": "LXGW WenKai",
+  "baseFontSize": 15,
+  "textFontFamily": "LXGW WenKai,Fira Code,Monaco",
   "accentColor": ""
 }
