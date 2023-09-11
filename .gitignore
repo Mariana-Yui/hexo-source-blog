@@ -12,5 +12,5 @@ _multiconfig.yml
 _week_record/
 template/
 intro-for-ltt/
-Excalidraw/*
-!/Excalidraw/*.ttf
+# Excalidraw/*
+# !/Excalidraw/*.ttf

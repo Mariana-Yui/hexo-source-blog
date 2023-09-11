@@ -2,7 +2,7 @@
 layout: post
 title: 《JavaScript设计模式与开发实践》读书笔记
 date: 2023-09-10 18:16:19
-update: 2023-09-11 02:06:48
+update: 2023-09-11 23:13:11
 author: Mariana
 banner_img: /imgs/banner/md/2023-09-10-javascript-design-mode-and-practice-record.jpeg
 index_img: /imgs/banner/md/2023-09-10-javascript-design-mode-and-practice-record.jpeg
@@ -14,6 +14,8 @@ categories:
 ---
 
 > 之前一直对设计模式方面的知识没有系统的学习, 私以为对常见设计模式和编程范型的掌握对提升架构思维和代码重构能力是很有帮助的. 本文为阅读《JavaScript 设计模式与开发实践》过程中的随笔, 包括 JavaScript 遗漏的基础知识的完善以及常见设计模式记录.
+
+_不定期更新 平常上班摸鱼的时候也是在看 webpack 源码..毕竟不能明目张胆的掏本书出来(随笔完结后该段删除)_
 
 # 第一部分
 
