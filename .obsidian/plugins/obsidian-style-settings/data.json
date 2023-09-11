@@ -49,9 +49,9 @@
   "anuppuccin-theme-settings@@anp-header-color-toggle": true,
   "anuppuccin-theme-settings@@anp-codeblock-numbers": true,
   "anuppuccin-theme-settings@@anp-custom-checkboxes": false,
-  "anuppuccin-theme-settings@@anp-background-image-dark": "url(\"https://raw.githubusercontent.com/Mariana-Yui/images/master/blog-imgs/1ppld1.png\")",
-  "anuppuccin-theme-settings@@anp-background-image-toggle": false,
-  "anuppuccin-theme-settings@@anp-custom-bg-card-fg-opacity-dark": 0.4,
-  "anuppuccin-theme-settings@@anp-custom-bg-blur-dark": 5,
+  "anuppuccin-theme-settings@@anp-background-image-dark": "url(\"https://raw.githubusercontent.com/Mariana-Yui/images/master/blog-imgs/wallhaven-l3edjp.png\")",
+  "anuppuccin-theme-settings@@anp-background-image-toggle": true,
+  "anuppuccin-theme-settings@@anp-custom-bg-card-fg-opacity-dark": 0,
+  "anuppuccin-theme-settings@@anp-custom-bg-blur-dark": 0,
   "anuppuccin-theme-settings@@anp-custom-bg-brightness-dark": 0.7
 }
