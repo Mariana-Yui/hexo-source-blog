@@ -1,4 +1,6 @@
 {
   "folder": "source/_posts",
-  "template": "template/new-note"
+  "template": "template/new-note",
+  "format": "",
+  "autorun": false
 }

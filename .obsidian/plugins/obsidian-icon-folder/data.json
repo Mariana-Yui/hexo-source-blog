@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "⛺",
       "✍",
       "⏺",
       "🗓",
-      "💘",
-      "😜"
+      "💘"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -31,5 +31,6 @@
   "source/_posts": "💘",
   "Day Planners": "🗓",
   "_week_record": "⏺",
-  "public": "🎉"
+  "public": "🎉",
+  "template": "⛺"
 }

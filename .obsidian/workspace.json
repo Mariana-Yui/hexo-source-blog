@@ -4,28 +4,30 @@
     "type": "split",
     "children": [
       {
-        "id": "4b30bc5e98125faf",
+        "id": "5223574c8a27f15c",
         "type": "tabs",
         "children": [
           {
-            "id": "99172c7c32b62a33",
+            "id": "a4aaba0efdbc0e3f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/2023-09-10-javascript-design-mode-and-practice-record.md",
+                "file": "source/_posts/2023-09-12.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "fa5b1c5c0c2aaaf5",
+            "id": "00b66d84defe6b1d",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2023-09-11 23.18.09.excalidraw.md"
+                "file": "source/_posts/2023-09-12.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -104,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2023-09-11 23.18.09.excalidraw.md",
+                "file": "source/_posts/2023-09-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2023-09-11 23.18.09.excalidraw.md",
+                "file": "source/_posts/2023-09-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +162,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2023-09-11 23.18.09.excalidraw.md"
+                "file": "source/_posts/2023-09-12.md"
+              }
+            }
+          },
+          {
+            "id": "40a2dd2735ca6518",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -183,46 +195,54 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.5
+    "width": 299.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fa5b1c5c0c2aaaf5",
+  "active": "00b66d84defe6b1d",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2023-09-12 18.54.42.excalidraw.md",
     "public/imgs/banner/mywifu2.png",
     "public/imgs/banner/category.png",
-    "public/imgs/banner/archive.jpeg",
-    "public/imgs/banner/tag.png",
     "public/imgs/banner/archive.png",
     "public/imgs/loading.gif",
     "public/imgs/banner/index.png",
-    "public/imgs/banner/md/2022-09-15-study-webpack-day5.png",
-    "public/imgs/banner/md/2023-04-20-server-via-nestjs-summary.jpeg",
-    "public/imgs/banner/md/2023-05-08-standard-version-source-code-analysis.jpeg",
-    "public/imgs/banner/md/2023-04-28-write-a-webpack5-plugin.jpeg",
-    "public/imgs/favicon.ico",
-    "public/imgs/loading.gif.bak",
-    "public/2022/12/06/2023-04-28-write-a-webpack5-plugin/index.html",
-    "public/2022/11/22/2022-11-21-study-webpack-day11/index.html",
-    "public/2022/11/24/2022-11-24-daily-record-from-oct-to-dec/index.html",
-    "public/2022/10/23/2022-10-23-study-webpack-day10/index.html",
-    "public/2022/10/09/2022-10-09-study-webpack-day9/index.html",
-    "public/2022/10/05/2022-10-05-study-webpack-day8/index.html",
-    "public/2022/09/30/2022-09-30-study-webpack-day7/index.html",
-    "public/2022/09/27/2022-09-27-pm2-online-issue-record/index.html",
-    "source/_posts/2023-09-10-javascript-design-mode-and-practice-record.md",
+    "public/live2dw/assets/nepmaid/model.moc",
+    "public/imgs/sllh2.jpeg",
+    "public/live2dw/assets/nepmaid/textures/02.png",
+    "public/live2dw/assets/nepmaid/textures/01.png",
+    "public/live2dw/assets/nepmaid/textures/00.png",
+    "public/live2dw/assets/nepmaid/textures",
+    "public/live2dw/assets/nepmaid/nepmaid.model.json",
+    "public/index.html",
+    "public/page/2/index.html",
+    "public/page/2",
+    "public/page/5/index.html",
+    "public/page/5",
+    "public/page/4/index.html",
+    "public/page/4",
+    "source/_posts/2023-09-12.md",
+    "Excalidraw/Drawing 2023-09-12 11.37.47.excalidraw.md",
     "Excalidraw/Drawing 2023-09-11 23.18.09.excalidraw.md",
     "Excalidraw/Drawing 2023-09-11 01.52.58.excalidraw.md",
+    "Excalidraw/Drawing 2023-09-11 23.18.09.excalidraw.png",
+    "source/_posts/2023-09-10-javascript-design-mode-and-practice-record.md",
+    "template/new-note.md",
+    "source/_posts/2023-05-08-standard-version-source-code-analysis.md",
+    "template/template.md",
+    "source/_posts/2022-10-23-study-webpack-day10.md",
+    "Excalidraw/Drawing 2023-09-10 19.46.11.excalidraw.md",
     "Excalidraw/Drawing 2023-09-11 17.22.29.excalidraw.md",
     "Excalidraw/Drawing 2023-09-11 17.19.34.excalidraw.md",
     "node_modules/semver-diff/readme.md",
@@ -237,14 +257,6 @@
     "node_modules/socks/docs/examples/index.md",
     "node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
     "node_modules/npm-check-updates/lib/package-managers/README.md",
-    "node_modules/katex/contrib/copy-tex/README.md",
-    "node_modules/katex/contrib/auto-render/README.md",
-    "node_modules/katex/contrib/mathtex-script-type/README.md",
-    "node_modules/katex/contrib/mhchem/README.md",
-    "node_modules/hexo-cli/assets/scaffolds/draft.md",
-    "node_modules/hexo-cli/assets/scaffolds/page.md",
-    "node_modules/hexo-cli/assets/scaffolds/post.md",
-    "node_modules/socks/docs/migratingFromV1.md",
     "未命名.canvas"
   ]
 }

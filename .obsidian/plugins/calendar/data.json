@@ -1,7 +1,7 @@
 {
   "shouldConfirmBeforeCreate": true,
   "weekStart": "locale",
-  "wordsPerDot": 250,
+  "wordsPerDot": 10000,
   "showWeeklyNote": true,
   "weeklyNoteFormat": "gggg年第ww周-周记",
   "weeklyNoteTemplate": "_week_record/template/ new-week-record.md",
