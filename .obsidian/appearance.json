@@ -2,9 +2,9 @@
   "cssTheme": "AnuPpuccin",
   "theme": "obsidian",
   "translucency": false,
-  "monospaceFontFamily": "Fira Code",
+  "monospaceFontFamily": "MonoLisa,Fira Code",
   "interfaceFontFamily": "LXGW WenKai",
   "baseFontSize": 15,
-  "textFontFamily": "LXGW WenKai,Fira Code,Monaco",
+  "textFontFamily": "LXGW WenKai,Fira Code,MonoLisa,Monaco",
   "accentColor": ""
 }
